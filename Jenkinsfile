@@ -1,19 +1,41 @@
 
-def branchn = ''
+// def branchn = ''
+// pipeline {
+//     agent any
+
+//     stages {
+//         stage('gitconnect') {
+//             steps {
+//                 git url : 'https://github.com/Mayank18-dotcom/devops-test.git'
+//                 echo 'connected to git'
+//             }
+//         }
+//         stage('getbranch'){
+//             steps {
+//                 branchn = env.BRANCH_NAME
+//                 echo branchn
+//             }
+//         }
+//     }
+// }
+
 pipeline {
     agent any
 
     stages {
-        stage('gitconnect') {
+        stage('Build') {
             steps {
-                git url : 'https://github.com/Mayank18-dotcom/devops-test.git'
-                echo 'connected to git'
+                echo 'Building..'
             }
         }
-        stage('getbranch'){
+        stage('Test') {
             steps {
-                branchn = env.BRANCH_NAME
-                echo branchn
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
             }
         }
     }
