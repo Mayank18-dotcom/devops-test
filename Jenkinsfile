@@ -14,7 +14,7 @@ pipeline {
             steps {
                 script{
                     echo 'chenges only to dags1'
-                    echo ${nn}
+                    echo nn
                 }
             }
         }
