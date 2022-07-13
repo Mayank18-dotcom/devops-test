@@ -11,7 +11,7 @@ pipeline {
         stage('getbranch'){
             steps {
                 echo 'chenges only to dags'
-                sh '''echo ${env.BRANCH_NAME}'''
+                sh '''echo $env.BRANCH_NAME'''
             }
         }
     }
