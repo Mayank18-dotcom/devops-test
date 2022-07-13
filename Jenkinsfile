@@ -13,9 +13,12 @@ pipeline {
         stage('getbranch'){
             steps {
                 echo 'chenges only to dags'
-                sh '''
+                script{
+                    sh '''
                     echo ${nn}
                 '''
+                }
+                
             }
         }
     }
