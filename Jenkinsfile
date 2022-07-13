@@ -1,3 +1,5 @@
+def nn = 'ss'
+
 pipeline {
     agent any
 
@@ -11,7 +13,7 @@ pipeline {
         stage('getbranch'){
             steps {
                 echo 'chenges only to dags'
-                sh '''echo $env.BRANCH_NAME'''
+                sh '''echo ${nn}'''
             }
         }
     }
