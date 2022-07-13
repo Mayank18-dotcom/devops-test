@@ -1,42 +1,42 @@
 
-// def branchn = ''
-// pipeline {
-//     agent any
-
-//     stages {
-//         stage('gitconnect') {
-//             steps {
-//                 git url : 'https://github.com/Mayank18-dotcom/devops-test.git'
-//                 echo 'connected to git'
-//             }
-//         }
-//         stage('getbranch'){
-//             steps {
-//                 branchn = env.BRANCH_NAME
-//                 echo branchn
-//             }
-//         }
-//     }
-// }
-
+def branchn = ''
 pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('gitconnect') {
             steps {
-                echo 'Building..'
+                git url : 'https://github.com/Mayank18-dotcom/devops-test.git'
+                echo 'connected to git'
             }
         }
-        stage('Test') {
+        stage('getbranch'){
             steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+                branchn = env.BRANCH_NAME
+                echo branchn
             }
         }
     }
 }
+
+// pipeline {
+//     agent any
+
+//     stages {
+//         stage('Build') {
+//             steps {
+//                 echo 'Building..'
+//             }
+//         }
+//         stage('Test') {
+//             steps {
+//                 echo 'Testing..'
+//             }
+//         }
+//         stage('Deploy') {
+//             steps {
+//                 echo 'Deploying....'
+//             }
+//         }
+//     }
+// }
