@@ -14,7 +14,7 @@ pipeline {
             steps {
                 echo 'chenges only to dags'
                 sh '''
-                    echo $nn
+                    echo ${nn}
                 '''
             }
         }
