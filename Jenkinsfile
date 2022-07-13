@@ -1,5 +1,4 @@
 
-def branchn = ''
 pipeline {
     agent any
 
@@ -12,8 +11,8 @@ pipeline {
         }
         stage('getbranch'){
             steps {
-                branchn = env.BRANCH_NAME
-                echo branchn
+                env.BRANCH_NAME
+                echo env.BRANCH_NAME
             }
         }
     }
