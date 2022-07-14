@@ -14,7 +14,7 @@ pipeline {
             steps {
                 script{
                     bat 'd:'
-                    bat 'cd cd STUDY'
+                    bat 'cd STUDY'
                     bat 'git clone https://github.com/Mayank18-dotcom/devops-test.git'
                     echo 'changes only to dags1'
                     echo nn
