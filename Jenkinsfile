@@ -13,7 +13,8 @@ pipeline {
         stage('getbranch'){
             steps {
                 script{
-                    echo 'chenges only to dags1'
+                    sh 'pwd'
+                    echo 'changes only to dags1'
                     echo nn
                 }
             }
