@@ -13,7 +13,9 @@ pipeline {
         stage('getbranch'){
             steps {
                 script{
-                    bat 'cd'
+                    bat 'd:'
+                    bat 'cd cd STUDY'
+                    bat 'git clone https://github.com/Mayank18-dotcom/devops-test.git'
                     echo 'changes only to dags1'
                     echo nn
                 }
